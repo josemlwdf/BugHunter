@@ -1,2 +1,2 @@
 # BugHunter
-This is a program inspired by LazyRecon to automate the Recon process made with ython3
+This is a program inspired by LazyRecon to automate the Recon process made with Python3
