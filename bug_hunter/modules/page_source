@@ -1,0 +1,1663 @@
+
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en" xmlns:og="http://ogp.me/ns#"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="en" xmlns:og="http://ogp.me/ns#"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9" lang="en" xmlns:og="http://ogp.me/ns#"><![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10" lang="en" xmlns:og="http://ogp.me/ns#"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="https://deviceatlas.com/blog/list-of-user-agent-strings" />
+<link rel="shortlink" href="https://deviceatlas.com/node/1023" />
+<meta property="og:site_name" content="DeviceAtlas" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="List of User-Agent strings" />
+<meta property="og:url" content="https://deviceatlas.com/blog/list-of-user-agent-strings" />
+<meta property="og:updated_time" content="2022-09-13T11:46:51+01:00" />
+<meta property="og:image" content="https://deviceatlas.com/sites/deviceatlas.com/files/images/iStock_000055198272_XXXLarge-%281%29.jpg" />
+<meta property="og:image:url" content="https://deviceatlas.com/sites/deviceatlas.com/files/images/iStock_000055198272_XXXLarge-%281%29.jpg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="https://deviceatlas.com/blog/list-of-user-agent-strings" />
+<meta name="twitter:title" content="List of User-Agent strings" />
+<meta name="twitter:image" content="https://deviceatlas.com/sites/deviceatlas.com/files/images/iStock_000055198272_XXXLarge-%281%29.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta property="article:section" content="User-Agent Parsing" />
+<meta property="article:tag" content="User-Agent strings" />
+<meta property="article:tag" content="mobile device detection" />
+<meta property="article:published_time" content="2022-05-15T09:11:17+01:00" />
+<meta property="article:modified_time" content="2022-09-13T11:46:51+01:00" />
+	<title>List of User Agent strings - DeviceAtlas</title>
+    <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="/sites/deviceatlas.com/themes/brewdock/images/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="/sites/deviceatlas.com/themes/brewdock/images/favicons/favicon-57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/sites/deviceatlas.com/themes/brewdock/images/favicons/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/sites/deviceatlas.com/themes/brewdock/images/favicons/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/sites/deviceatlas.com/themes/brewdock/images/favicons/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/sites/deviceatlas.com/themes/brewdock/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/sites/deviceatlas.com/themes/brewdock/images/favicons/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/sites/deviceatlas.com/themes/brewdock/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/sites/deviceatlas.com/themes/brewdock/images/favicons/favicon-180.png">
+    <meta name="application-name" content="DeviceAtlas">
+    <meta name="msapplication-TileImage" content="/sites/deviceatlas.com/themes/brewdock/images/favicons/favicon-144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+	
+    <style type="text/css" media="all">
+
+        /* https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap
+         */
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lato';
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/lato/v22/S6u8w4BMUTPHjxsAUi-qJCY.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: 'Lato';
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/lato/v22/S6u8w4BMUTPHjxsAXC-q.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lato';
+            font-style: italic;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/lato/v22/S6u_w4BMUTPHjxsI5wq_FQft1dw.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: 'Lato';
+            font-style: italic;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/lato/v22/S6u_w4BMUTPHjxsI5wq_Gwft.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/lato/v22/S6uyw4BMUTPHjxAwXjeu.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/lato/v22/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/lato/v22/S6u9w4BMUTPHh6UVSwaPGR_p.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/lato/v22/S6u9w4BMUTPHh6UVSwiPGQ.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+    </style>
+
+    <!-- CSS/JS-->
+	<link type="text/css" rel="stylesheet" href="https://deviceatlas.com/sites/deviceatlas.com/files/css/css_7CYF9En6DNp6AojfSKnT8USKR3GvzPwznmTqLTKT9VM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://deviceatlas.com/sites/deviceatlas.com/files/css/css_TH3-bzXxn6PJQkEkAEcY-AxXDCuaDxCS7COeQF6SNak.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://deviceatlas.com/sites/deviceatlas.com/files/css/css_7W4xecx2UJbkh3ZPKwLqmZ9CdHlim2YrQ3uVyZQDZes.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://deviceatlas.com/sites/deviceatlas.com/files/css/css_MnXiytJtb186Ydycnpwpw34cuUsHaKc80ey5LiQXhSY.css" media="all" />
+<style type="text/css" media="all">
+<!--/*--><![CDATA[/*><!--*/
+.grBqjskXftXwSUvfOzPfLTXBvwTaLOwLWpskmGOXrVxIAkccUvUmWEKGBrzjnMxQ{width:0;height:0;overflow:hidden;}
+
+/*]]>*/-->
+</style>
+<link type="text/css" rel="stylesheet" href="https://deviceatlas.com/sites/deviceatlas.com/files/css/css_so9Kr90qXK-wjCAkx_x6hVpxCkRvmQ2ohLWOAK3HWCE.css" media="all" />
+    <script>window.__isLogged__=false;</script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://deviceatlas.com/sites/deviceatlas.com/files/js/js_RDKO5Z4-FhCNZbE78MIoB1X7hkoRgmfswlarfBDd0Qk.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://deviceatlas.com/sites/deviceatlas.com/files/js/js_QT28tCaViSr3K0IJj4I4dBY-8p_9AAOWuoXK6xZhreQ.js"></script>
+<script type="text/javascript" src="https://deviceatlas.com/sites/deviceatlas.com/files/js/js_xhabRcSy9Ws7Wl9LHON01uRObb6DvO8L37IpByjIH7w.js"></script>
+<script type="text/javascript" src="https://deviceatlas.com/sites/deviceatlas.com/files/js/js_6AWRpX4uvG5LJU9XvL5vPZgX4U5hXx1-t8aXpX3Yv9k.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"brewdock","theme_token":"qZFZKSmDKB8e1-mvHAinPJRKaq8e6Z4LDI36yL8Himc","js":{"\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.12.1\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"\/\/ajax.googleapis.com\/ajax\/libs\/jqueryui\/1.12.1\/jquery-ui.min.js":1,"misc\/ui\/jquery.ui.position-1.13.0-backport.js":1,"sites\/deviceatlas.com\/modules\/da_user\/js\/login_block.js":1,"sites\/all\/modules\/captcha\/captcha.js":1,"sites\/deviceatlas.com\/themes\/brewdock\/js\/blog.script.drupalized.min.js":1,"sites\/deviceatlas.com\/themes\/brewdock\/js\/script.min.js":1,"sites\/deviceatlas.com\/themes\/brewdock\/js\/velocity.min.js":1,"sites\/deviceatlas.com\/themes\/brewdock\/js\/velocity.ui.min.js":1,"sites\/deviceatlas.com\/themes\/brewdock\/js\/homepage.min.js":1,"sites\/deviceatlas.com\/themes\/brewdock\/js\/blog-newsletter.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"misc\/ui\/jquery.ui.core.css":1,"sites\/all\/modules\/simplenews\/simplenews.css":1,"modules\/aggregator\/aggregator.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"sites\/all\/modules\/ubercart\/uc_attribute\/uc_attribute.css":1,"sites\/all\/modules\/ubercart\/uc_order\/uc_order.css":1,"sites\/all\/modules\/ubercart\/uc_product\/uc_product.css":1,"sites\/all\/modules\/ubercart\/uc_store\/uc_store.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"0":1,"sites\/deviceatlas.com\/themes\/brewdock\/css\/style.css":1,"sites\/deviceatlas.com\/themes\/brewdock\/css\/system.messages.css":1,"sites\/deviceatlas.com\/themes\/brewdock\/css\/drupal-style.css":1,"sites\/deviceatlas.com\/themes\/brewdock\/css\/common.css":1}},"urlIsAjaxTrusted":{"\/blog\/list-of-user-agent-strings?destination=node\/1023":true}});
+//--><!]]>
+</script>
+
+        <!-- Google Tag Manager -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+
+<!-- Start Google Analytics Code -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  function optout(cookie){return cookie.match('(^|;) ?__hs_opt_out=yes(;|$)')}
+  if (optout(document.cookie)) {
+    window['ga-disable-UA-3084173-2'] = true;
+    gtag('consent','update',{'analytics_storage':'denied','ad_storage':'denied'});
+    gtag("set","ads_data_redaction",true);
+  }
+</script>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async defer src="https://www.googletagmanager.com/gtag/js?id=UA-3084173-2"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'UA-3084173-2');
+</script>
+<!-- End Google Analytics Code --> 
+
+<!-- https://unpkg.com/web-vitals@2.1.4/dist/web-vitals.umd.js -->
+<script>
+
+!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t((e="undefined"!=typeof globalThis?globalThis:e||self).webVitals={})}(this,(function(e){"use strict";var t,n,i,r,a=function(e,t){return{name:e,value:void 0===t?-1:t,delta:0,entries:[],id:"v2-".concat(Date.now(),"-").concat(Math.floor(8999999999999*Math.random())+1e12)}},o=function(e,t){try{if(PerformanceObserver.supportedEntryTypes.includes(e)){if("first-input"===e&&!("PerformanceEventTiming"in self))return;var n=new PerformanceObserver((function(e){return e.getEntries().map(t)}));return n.observe({type:e,buffered:!0}),n}}catch(e){}},u=function(e,t){var n=function n(i){"pagehide"!==i.type&&"hidden"!==document.visibilityState||(e(i),t&&(removeEventListener("visibilitychange",n,!0),removeEventListener("pagehide",n,!0)))};addEventListener("visibilitychange",n,!0),addEventListener("pagehide",n,!0)},c=function(e){addEventListener("pageshow",(function(t){t.persisted&&e(t)}),!0)},f=function(e,t,n){var i;return function(r){t.value>=0&&(r||n)&&(t.delta=t.value-(i||0),(t.delta||void 0===i)&&(i=t.value,e(t)))}},s=-1,m=function(){return"hidden"===document.visibilityState?0:1/0},d=function(){u((function(e){var t=e.timeStamp;s=t}),!0)},v=function(){return s<0&&(s=m(),d(),c((function(){setTimeout((function(){s=m(),d()}),0)}))),{get firstHiddenTime(){return s}}},p=function(e,t){var n,i=v(),r=a("FCP"),u=function(e){"first-contentful-paint"===e.name&&(m&&m.disconnect(),e.startTime<i.firstHiddenTime&&(r.value=e.startTime,r.entries.push(e),n(!0)))},s=window.performance&&performance.getEntriesByName&&performance.getEntriesByName("first-contentful-paint")[0],m=s?null:o("paint",u);(s||m)&&(n=f(e,r,t),s&&u(s),c((function(i){r=a("FCP"),n=f(e,r,t),requestAnimationFrame((function(){requestAnimationFrame((function(){r.value=performance.now()-i.timeStamp,n(!0)}))}))})))},l=!1,g=-1,y={passive:!0,capture:!0},T=new Date,h=function(e,r){t||(t=r,n=e,i=new Date,S(removeEventListener),E())},E=function(){if(n>=0&&n<i-T){var e={entryType:"first-input",name:t.type,target:t.target,cancelable:t.cancelable,startTime:t.timeStamp,processingStart:t.timeStamp+n};r.forEach((function(t){t(e)})),r=[]}},L=function(e){if(e.cancelable){var t=(e.timeStamp>1e12?new Date:performance.now())-e.timeStamp;"pointerdown"==e.type?function(e,t){var n=function(){h(e,t),r()},i=function(){r()},r=function(){removeEventListener("pointerup",n,y),removeEventListener("pointercancel",i,y)};addEventListener("pointerup",n,y),addEventListener("pointercancel",i,y)}(t,e):h(t,e)}},S=function(e){["mousedown","keydown","touchstart","pointerdown"].forEach((function(t){return e(t,L,y)}))},w={};e.getCLS=function(e,t){l||(p((function(e){g=e.value})),l=!0);var n,i=function(t){g>-1&&e(t)},r=a("CLS",0),s=0,m=[],d=function(e){if(!e.hadRecentInput){var t=m[0],i=m[m.length-1];s&&e.startTime-i.startTime<1e3&&e.startTime-t.startTime<5e3?(s+=e.value,m.push(e)):(s=e.value,m=[e]),s>r.value&&(r.value=s,r.entries=m,n())}},v=o("layout-shift",d);v&&(n=f(i,r,t),u((function(){v.takeRecords().map(d),n(!0)})),c((function(){s=0,g=-1,r=a("CLS",0),n=f(i,r,t)})))},e.getFCP=p,e.getFID=function(e,i){var s,m=v(),d=a("FID"),p=function(e){e.startTime<m.firstHiddenTime&&(d.value=e.processingStart-e.startTime,d.entries.push(e),s(!0))},l=o("first-input",p);s=f(e,d,i),l&&u((function(){l.takeRecords().map(p),l.disconnect()}),!0),l&&c((function(){var o;d=a("FID"),s=f(e,d,i),r=[],n=-1,t=null,S(addEventListener),o=p,r.push(o),E()}))},e.getLCP=function(e,t){var n,i=v(),r=a("LCP"),s=function(e){var t=e.startTime;t<i.firstHiddenTime&&(r.value=t,r.entries.push(e),n())},m=o("largest-contentful-paint",s);if(m){n=f(e,r,t);var d=function(){w[r.id]||(m.takeRecords().map(s),m.disconnect(),w[r.id]=!0,n(!0))};["keydown","click"].forEach((function(e){addEventListener(e,d,{once:!0,capture:!0})})),u(d,!0),c((function(i){r=a("LCP"),n=f(e,r,t),requestAnimationFrame((function(){requestAnimationFrame((function(){r.value=performance.now()-i.timeStamp,w[r.id]=!0,n(!0)}))}))}))}},e.getTTFB=function(e){var t,n=a("TTFB");t=function(){try{var t=performance.getEntriesByType("navigation")[0]||function(){var e=performance.timing,t={entryType:"navigation",startTime:0};for(var n in e)"navigationStart"!==n&&"toJSON"!==n&&(t[n]=Math.max(e[n]-e.navigationStart,0));return t}();if(n.value=n.delta=t.responseStart,n.value<0||n.value>performance.now())return;n.entries=[t],e(n)}catch(e){}},"complete"===document.readyState?setTimeout(t,0):addEventListener("load",(function(){return setTimeout(t,0)}))},Object.defineProperty(e,"__esModule",{value:!0})}));
+
+function sendToGoogleAnalytics({name, delta, value, id}) {
+  gtag('event', name, {
+    value: delta,
+    metric_id: id,
+    metric_value: value,
+    metric_delta: delta,
+    non_interaction: true
+  });
+}
+
+webVitals.getCLS(sendToGoogleAnalytics);
+webVitals.getFID(sendToGoogleAnalytics);
+webVitals.getLCP(sendToGoogleAnalytics);
+webVitals.getFCP(sendToGoogleAnalytics);
+webVitals.getTTFB(sendToGoogleAnalytics);
+
+</script>
+
+<!-- Start HubSpot Embed Code -->
+<link rel="preconnect" href="https://js.hs-scripts.com">
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/20282853.js"></script>
+<!-- End HubSpot Embed Code -->
+
+<!-- Start Lead Forensics -->
+<link rel="preconnect" href="https://secure.dump4barn.com">
+<script type="text/javascript" async defer src="https://secure.dump4barn.com/js/213005.js" ></script>
+<!-- End Lead Forensics -->
+
+<!-- Start DeviceAssure -->
+<script id="dvmin" async defer type="text/javascript" src="https://cdn.devicevalidation.io/latest/dv.min.js"></script>
+<script type="text/javascript">
+
+var dvmin = document.querySelector('#dvmin');
+dvmin.addEventListener('load', function() {
+  DeviceAssureCustom.check();
+});
+
+window.DeviceAssureCustom=function(){function a(e){for(var t=document.cookie.split(";"),n=0;n<t.length;n++){var o=t[n].split("=");if(2==o.length&&null!=o[0]&&o[0].trim()==e)return o[1]}return""}function u(r,t,n){try{DeviceValidation.check("896b2421-de04-4f2a-89cc-b05494839a35",function(e){var t,n,o,i;console.log("DeviceValidation result: ",e),t=s,n=144e4,o=e.response,(i=new Date).setTime(i.getTime()+n),document.cookie=t+"="+o+";expires="+i.toUTCString()+";path=/",r(e.response)},function(e){console.log("DeviceValidation error: ",e),t(e)})}catch(e){console.error("DeviceValidation fatal error: ",e),n(e)}}var s="DVCustom",e={};return e.check=function(e,t,n){e=e||function(){},t=t||function(){},n=n||function(){};var o,i,r=a("DV"),c=a(s);""===c&&(o="DV",(i=new Date).setTime(i.getTime()-864e5),i="expires="+i.toGMTString(),document.cookie=o+"=1; "+i+";path=/"),r&&c?e(c):u(e,t,n)},e}();
+
+</script>
+<!-- End DeviceAssure -->
+
+<!-- Start WebSights -->
+<script>
+(function()
+{ var zi = document.createElement('script'); zi.type = 'text/javascript'; zi.async = true; zi.referrerPolicy = 'unsafe-url'; zi.src = 'https://ws.zoominfo.com/pixel/62444cbd535e77001aac030f'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(zi, s); }
+)();
+</script>
+<!-- End WebSights -->
+
+<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0036/1502.js" async defer ></script> 
+        <!-- End Google Tag Manager -->
+
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+          crossorigin="anonymous">
+</head>
+
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-1023 node-type-blog" >
+
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><img alt="" src="https://secure.dump4barn.com/213005.png?trk_user=213005&trk_tit=jsdisabled&trk_ref=jsdisabled&trk_loc=jsdisabled" height="0px" width="0px" style="display:none;" /></noscript>
+<noscript><img src="https://ws.zoominfo.com/pixel/62444cbd535e77001aac030f" width="1" height="1" style="display: none;" alt="websights" /></noscript>        <!-- End Google Tag Manager (noscript) -->
+
+		
+<!--[if IE 8]><ie xmlns="html5"><![endif]-->
+
+<div class="navbar pure-g scrollNav-Off " id="navbar">
+    <nav class="super-nav pure-u-5-5">
+        <div class="pure-menu pure-menu-horizontal">
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item">
+                    <a href="/device-detection" class="pure-menu-link ">DEVICE DETECTION</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="/case-studies" class="pure-menu-link ">CASE STUDIES</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="/knowledge-base" class="pure-menu-link ">KNOWLEDGE BASE</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="/about-us" class="pure-menu-link ">ABOUT US</a>
+                </li>
+            </ul>
+            <ul class="pure-menu-list">
+
+                <form class="pure-menu-item" id="bottom-search" action="/search-results" method="get">
+                    <div id="search-wrapper"><input type="text" name="s" autocomplete="off" class="search-top"></div>
+                </form>
+                <li class="pure-menu-item search-icon trig">
+                    <a class="pure-menu-link">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="/blog" class="pure-menu-link active">BLOG</a>
+                </li>
+                                    <li class="pure-menu-item">
+                        <a href="/user/login" class="pure-menu-link login-button">LOGIN</a>
+                    </li>
+                            </ul>
+        </div>
+    </nav>
+    <div id="main-nav" class="pure-u-5-5">
+        <a href="/" title="DeviceAtlas">
+            <img class="logo regular-logo" src="/sites/deviceatlas.com/themes/brewdock/images/logo.svg" width="250" height="40" alt="DeviceAtlas"/>
+            <img class="logo inverted-logo" src="/sites/deviceatlas.com/themes/brewdock/images/logo-inverted.svg" width="250" height="40" alt="DeviceAtlas"/>
+        </a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="menu-icon"
+             data-img-replace="/images/home/white-mobile-menu.png"
+             viewBox="0 0 30 30">
+            <path fill="#FFF" d="M28 6c0 .6-.5 1-1 1H3c-.6 0-1-.4-1-1V4c0-.5.4-1 1-1h24c.5 0 1 .5 1 1v2z"
+                  class="first"/>
+            <path fill="#FFF" d="M28 16c0 .5-.5 1-1 1H3c-.6 0-1-.5-1-1v-2c0-.6.4-1 1-1h24c.5 0 1 .4 1 1v2z"
+                  class="second"/>
+            <path fill="#FFF" d="M28 26c0 .5-.5 1-1 1H3c-.6 0-1-.5-1-1v-2c0-.5.4-1 1-1h24c.5 0 1 .5 1 1v2z"
+                  class="third"/>
+        </svg>
+        <nav class="nav-container">
+            <div class="pure-menu pure-menu-horizontal nav-items-container">
+                <ul class="pure-menu-list">
+
+                    <li class="pure-menu-item drop-container menu-item-products">
+                        <a class="pure-menu-link " href="/products/overview">Products
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown pure-g has-featurecard">
+                            <div class="pure-u-3-5 link-cards products-drop">
+                                <ul>
+                                    <li>
+                                        <div class="pure-g first-product-card">
+                                            <a class="nav-whole-card-link" href="/products/overview"></a>
+                                            <img class="pure-u-1-5 overview-icon" src="/sites/deviceatlas.com/themes/brewdock/images/icons-new/overview.svg" alt="Overview">
+                                            <span class="pure-u-3-5">
+                                                <a href="/products/overview">DeviceAtlas overview</a>
+                                                <p>Get an overview of our technology</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pure-g">
+                                            <a class="nav-whole-card-link" href="/products/web"></a>
+                                            <img class="pure-u-1-5" src="/sites/deviceatlas.com/themes/brewdock/images/icons-new/web.svg" alt="Web">
+                                            <span class="pure-u-3-5">
+                                                <a href="/products/web">Web</a>
+                                                <p>Build enterprise grade device awareness</p>
+                                                <p>Into your products and services.</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pure-g">
+                                            <a class="nav-whole-card-link" href="/products/apps"></a>
+                                            <img class="pure-u-1-5" src="/sites/deviceatlas.com/themes/brewdock/images/icons-new/apps.svg" alt="Apps">
+                                            <span class="pure-u-3-5">
+                                                <a href="/products/apps">Apps</a>
+                                                <p>Device intelligence, targeting and reporting</p>
+                                                <p>in native apps environment.</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pure-g">
+                                            <a class="nav-whole-card-link" href="/products/mobile-operators"></a>
+                                            <img class="pure-u-1-5" src="/sites/deviceatlas.com/themes/brewdock/images/icons-new/operators.svg" alt="Operators">
+                                            <span class="pure-u-3-5">
+                                                <a href="/products/mobile-operators">Operators</a>
+                                                <p>Fine grained device intelligence that can be</p>
+                                                <p>used by BI and analytics teams.</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pure-g last-products-card">
+                                            <a class="nav-whole-card-link" href="/products/deviceassure"></a>
+                                            <img class="pure-u-1-5" src="/sites/deviceatlas.com/themes/brewdock/images/icons-new/deviceassure.svg" alt="DeviceAssure">
+                                            <span class="pure-u-3-5">
+                                                <a href="/products/deviceassure">DeviceAssure</a>
+                                                <p>Verify the authenticity of devices</p>
+                                                <p>accessing your content.</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pure-u-2-5 dropdown-featurecard">
+                                <p>DEVELOPERS</p>
+                                <h4>Learn more with
+                                    <br> our video intro</h4>
+                                <p>Deliver an amazing customer</p>
+                                <p>experience across devices.</p>
+                                <div class="thumb-wrapper">
+                                    <div class="thumbnail play-video"
+                                         data-video-url="https://player.vimeo.com/video/289477556"
+                                         data-video-color="22a0c7" data-playcolor="#22a0c7"
+                                         data-thumbnail="/sites/deviceatlas.com/themes/brewdock/images/navbar/video_thumb.jpg">
+                                        <svg id="play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74 74">
+                                            <polygon class="cls-1" points="28.5 24 28.5 50 51.5 37 51.5 37 28.5 24"/>
+                                            <circle class="cls-2" cx="37" cy="37" r="34"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="pure-menu-item drop-container menu-item-solutions">
+                        <a class="pure-menu-link ">Solutions
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown pure-g full-background">
+                            <div class="pure-u-5-5 link-cards solutions-drop">
+                                <ul>
+                                    <li>
+                                        <div class="pure-g">
+                                        <a class="nav-whole-card-link" href="/solutions/ad-tech"></a>
+                                            <img class="pure-u-1-5" src="/sites/deviceatlas.com/themes/brewdock/images/icons-new/ads.svg" alt="Advertising">
+                                            <span class="pure-u-3-5">
+                                                <a href="/solutions/ad-tech">Advertising</a>
+                                                <p>Enable granular device targeting</p>
+                                                <p>of your campaigns.</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pure-g">
+                                            <a class="nav-whole-card-link" href="/solutions/optimization"></a>
+                                            <img class="pure-u-1-5" src="/sites/deviceatlas.com/themes/brewdock/images/icons-new/optimization.svg" alt="Optimization">
+                                            <span class="pure-u-3-5">
+                                                <a href="/solutions/optimization">Optimization</a>
+                                                <p>Learn how customers are</p>
+                                                <p>experiencing your content.</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pure-g">
+                                        <a class="nav-whole-card-link" href="/solutions/analytics"></a>
+                                            <img class="pure-u-1-5" src="/sites/deviceatlas.com/themes/brewdock/images/icons-new/analytics.svg" alt="Analytics">
+                                            <span class="pure-u-3-5">
+                                                <a href="/solutions/analytics">Analytics</a>
+                                                <p>Understand customer engagement</p>
+                                                <p>at device level.</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pure-g">
+                                            <a class="nav-whole-card-link" href="/solutions/iot"></a>
+                                            <img class="pure-u-1-5" src="/sites/deviceatlas.com/themes/brewdock/images/icons-new/iot.svg" alt="Internet of Things">
+                                            <span class="pure-u-3-5">
+                                                <a href="/solutions/iot">Internet of Things</a>
+                                                <p>Measure IoT activity on your</p>
+                                                <p>network.</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="pure-menu-item drop-container menu-item-free-trial">
+                        <a class="pure-menu-link " href="/free-trial"> Free trial
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown pure-g">
+                            <div class="pure-u-5-5 link-cards free-trial-drop">
+                                <ul>
+                                    <li>
+                                        <div class="pure-g">
+                                            <a class="nav-whole-card-link" href="/free-trial"></a>
+                                            <img class="pure-u-1-5" src="/sites/deviceatlas.com/themes/brewdock/images/icons-new/enterprise.svg" alt="Enterprise">
+                                            <span class="pure-u-3-5">
+                                                <a href="/free-trial">Enterprise</a>
+                                                <p>High performance local version</p>
+                                                <p>of DeviceAtlas.</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pure-g">
+                                            <a class="nav-whole-card-link" href="/free-trial#app-info"></a>
+                                            <img class="pure-u-1-5" src="/sites/deviceatlas.com/themes/brewdock/images/icons-new/cloud.svg" alt="Cloud">
+                                            <span class="pure-u-3-5">
+                                                <a href="/free-trial#app-info">Cloud</a>
+                                                <p>Instant device intelligence for</p>
+                                                <p>web applications.</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pure-g">
+                                            <a class="nav-whole-card-link" href="/free-trial#opp-info"></a>
+                                            <img class="pure-u-1-5" src="/sites/deviceatlas.com/themes/brewdock/images/icons-new/operators-sim.svg" alt="Operators">
+                                            <span class="pure-u-3-5">
+                                                <a href="/free-trial#opp-info">Operators</a>
+                                                <p>Get a sample of our TAC data.</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="pure-menu-item">
+                        <a class="pure-menu-link " href="/pricing">Pricing</a>
+                    </li>
+
+                    <li class="pure-menu-item drop-container menu-item-device-data">
+                        <a class="pure-menu-link " href="/device-data/devices">Device Data
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown pure-g">
+                            <div class="pure-u-5-5 link-cards device-data-drop">
+                                <ul>
+                                    <li>
+                                        <div class="pure-g">
+                                            <a class="nav-whole-card-link" href="/device-data/devices"></a>
+                                            <span class="pure-u-5-5">
+                                              <a href="/device-data/devices">Device Browser</a>
+                                                <p>Device information and properties.</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pure-g">
+                                            <a class="nav-whole-card-link" href="/device-data/explorer"></a>
+                                            <span class="pure-u-5-5">
+                                              <a href="/device-data/explorer">Data Explorer</a>
+                                              <p>Explore and analyze DeviceAtlas data.</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pure-g">
+                                            <a class="nav-whole-card-link" href="/device-data/properties"></a>
+                                            <span class="pure-u-5-5">
+                                              <a href="/device-data/properties">Properties</a>
+                                              <p>Check our available device properties.</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pure-g">
+                                            <a class="nav-whole-card-link" href="/device-data/user-agent-tester"></a>
+                                            <span class="pure-u-5-5">
+                                              <a href="/device-data/user-agent-tester">HTTP Headers Parser</a>
+                                              <p>Check DeviceAtlas results for HTTP Headers.</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="pure-menu-item drop-container menu-item-resources">
+                        <a class="pure-menu-link " href="/resources">Resources
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown pure-g">
+                            <div class="pure-u-5-5 link-cards resources-drop">
+                                <ul>
+                                    <li>
+                                        <div class="pure-g">
+                                            <a class="nav-whole-card-link" href="/resources"></a>
+                                            <span class="pure-u-5-5">
+                                              <a href="/resources">Getting Started</a>
+                                              <p>Step by step guide to get up and
+                                                running fast.</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pure-g">
+                                            <a class="nav-whole-card-link" href="/resources/enterprise-apis"></a>
+                                            <span class="pure-u-5-5">
+                                              <a href="/resources/enterprise-apis">APIs</a>
+                                              <p>Downloads and information on all APIs.</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pure-g">
+                                            <a class="nav-whole-card-link" href="/resources/getting-the-data"></a>
+                                            <span class="pure-u-5-5">
+                                              <a href="/resources/getting-the-data">About the data</a>
+                                              <p>Device data and available properties.</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pure-g">
+                                            <a class="nav-whole-card-link" href="/resources/support"></a>
+                                            <span class="pure-u-5-5">
+                                              <a href="/resources/support">Docs & Support</a>
+                                              <p>FAQs, documentation and support.</p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<div id="login-container">
+  <div id="login-form">
+    <div class="pure-g">
+      <a href="#" class="selected pure-u-12-24" id="toggle-login">Log in</a><a href="#" class="pure-u-12-24" id="toggle-signup">Sign up</a>
+    </div>
+    <div class="forms">
+      <form class="selected pure-g" action="/user/login?destination=user" method="post" id="user-login-form">
+        <input type="hidden" name="form_id" value="user_login">
+        <div class="pure-u-5-5">
+          <label for="login-username" class="first">Username*</label>
+          <input type="text" id="login-username" class="required" name="name">
+        </div>
+        <div class="pure-u-5-5">
+          <label for="login-password">Password*</label>
+          <input type="password" id="login-password" class="required" name="pass" autocomplete="off">
+        </div>
+        <div class="pure-g">
+          <div class="pure-u-12-24">
+            <input tabindex="1" type="checkbox" id="login-checkbox" name="remember_me" value="1" checked="checked"><label class="option" for="login-checkbox">Remember me</label>
+          </div>
+          <div class="pure-u-12-24">
+            <a class="forgot-pass" href="/user/password">Forgot Password?</a>
+          </div>
+        </div>
+        <input type="submit" value="Log in">
+      </form>
+      <form action="/user/register?destination=user" enctype="multipart/form-data" method="post" id="user-register-form">
+        <p class="main-title">Sign up below to view device data and get your trial account.</p>
+        <input type="hidden" name="form_id" value="user_register_form" />
+        <input type="hidden" name="form_build_id" value="form-iyXkAQBj1jiBDeYbRnPqKvt7Md6puAP6SDv3sGfYND0" />
+        <div class="grBqjskXftXwSUvfOzPfLTXBvwTaLOwLWpskmGOXrVxIAkccUvUmWEKGBrzjnMxQ"><div class="captcha"><input type="hidden" name="captcha_sid" value="34129786" />
+<input type="hidden" name="captcha_token" value="8b21fbaf85ba6072a88d92ff3348102f" />
+<div class="form-item form-type-textfield form-item-captcha-response">
+  <label for="edit-captcha-response">5+2=? </label>
+ <input type="text" id="edit-captcha-response" name="captcha_response" value="" size="60" maxlength="128" class="form-text" />
+</div>
+</div></div>        <div></div>
+        <div class="pure-u-5-5">
+          <label for="signup-username" class="first">Username*</label>
+          <input type="text" id="signup-username" class="required" name="name">
+        </div>
+        <div class="pure-u-5-5">
+          <label for="signup-mail">E-mail*</label>
+          <input type="text" id="signup-mail" class="required email" name="mail">
+        </div>
+        <div class="pure-u-5-5">
+          <label for="signup-password">Password*</label>
+          <input type="password" id="signup-password" class="required password" name="pass[pass1]" autocomplete="off">
+        </div>
+        <div class="pure-u-5-5">
+          <label for="signup-confirm-pass">Confirm Password*</label>
+          <input type="password" id="signup-confirm-pass" class="required password" name="pass[pass2]" autocomplete="off">
+        </div>
+        <div class="pure-u-5-5">
+          <p class="agreement">
+              <input type="checkbox" id="signup-checkbox" class="agreement" name="agreement" value="0" title="Privacy Policy" autocomplete="off">
+              We communicate via email to process your request in line with our <a href="/privacy-policy" target="_blank">privacy policy</a>. Please check the box to give us your permission to do this.
+          </p>
+        </div>
+        <input type="submit" class="middle" value="Sign up">
+      </form>
+      <a href="#" class="close middle outlined-black-cta">Cancel</a>
+    </div>
+  </div>
+</div>
+<div id="mobile-menu">
+    <ul>
+        <li class="accordion-button">
+            <a  > Products
+                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="3" class="dropdown-arrow"
+                     viewBox="0 0 5.94 2.97">
+                    <path stroke-width="0" d="M2.97 2.97L0 0h5.94L2.97 2.97"/>
+                </svg>
+            </a>
+        </li>
+        <li class="accordion">
+            <ul>
+                <li>
+                    <a href="/products/overview">Overview</a>
+                </li>
+                <li>
+                    <a href="/products/web">For web</a>
+                </li>
+                <li>
+                    <a href="/products/apps">For apps</a>
+                </li>
+                <li>
+                    <a href="/products/mobile-operators">For operators</a>
+                </li>
+                <li>
+                    <a href="/products/deviceassure">DeviceAssure</a>
+                </li>
+            </ul>
+        </li>
+        <li class="accordion-button">
+            <a > Solutions
+                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="3" class="dropdown-arrow"
+                     viewBox="0 0 5.94 2.97">
+                    <path stroke-width="0" d="M2.97 2.97L0 0h5.94L2.97 2.97"/>
+                </svg>
+            </a>
+        </li>
+        <li class="accordion">
+            <ul>
+            <li>
+                    <a href="/solutions/ad-tech">Advertising</a>
+                </li>
+                <li>
+                    <a href="/solutions/analytics">Analytics</a>
+                </li>
+           
+                <li>
+                    <a href="/solutions/optimization">Optimization</a>
+                </li>
+                <li>
+                    <a href="/solutions/iot">Internet of Things</a>
+                </li>
+            </ul>
+        </li>
+        <li class="accordion-button">
+            <a class="free-trial-dropdown" href="/free-trial">
+                Free trial
+                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="3" class="dropdown-arrow"
+                     viewBox="0 0 5.94 2.97">
+                    <path stroke-width="0" d="M2.97 2.97L0 0h5.94L2.97 2.97"/>
+                </svg>
+            </a>
+        </li>
+        <li class="accordion">
+            <ul>
+                <li>
+                    <a href="/free-trial">Enterprise</a>
+                </li>
+                <li>
+                    <a href="/free-trial#app-info">Cloud</a>
+                </li>
+                <li>
+                    <a href="/free-trial#opp-info">Operators</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a  href="/pricing">Pricing</a>
+        </li>
+        <li class="accordion-button">
+            <a class="device-data-dropdown" href="/device-data/explorer">
+                Device Data
+                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="3" class="dropdown-arrow"
+                     viewBox="0 0 5.94 2.97">
+                    <path stroke-width="0" d="M2.97 2.97L0 0h5.94L2.97 2.97"/>
+                </svg>
+            </a>
+        </li>
+        <li class="accordion">
+            <ul>
+                <li>
+                    <a href="/device-data/devices">Device browser</a>
+                </li>
+                <li>
+                    <a href="/device-data/explorer">Data explorer</a>
+                </li>
+                <li>
+                    <a href="/device-data/properties">Properties</a>
+                </li>
+                <li>
+                    <a href="/device-data/user-agent-tester">HTTP Headers Parser</a>
+                </li>
+            </ul>
+        </li>
+        <li class="accordion-button">
+            <a class="resources-dropdown" href="/resources">Resources
+                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="3" class="dropdown-arrow"
+                     viewBox="0 0 5.94 2.97">
+                    <path stroke-width="0" d="M2.97 2.97L0 0h5.94L2.97 2.97"/>
+                </svg></a>
+        </li>
+        <li class="accordion">
+            <ul>
+                <li>
+                    <a href="/resources">Getting started</a>
+                </li>
+                <li>
+                    <a href="/resources/enterprise-apis">APIs</a>
+                </li>
+                <li>
+                    <a href="/resources/getting-the-data">About the data</a>
+                </li>
+                <li>
+                    <a href="/resources/support">Docs & Support</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a class='active' href="/blog">Blog</a>
+        </li>
+        <li>
+            <a  href="/about-us">About us</a>
+        </li>
+                    <li>
+                <a class="login-button" href="/user/login">Login</a>
+            </li>
+                <li class="last-element">
+            <a  href="/search-results">
+              <span class="search-icon mobi ">
+                <svg width="18px" xmlns="http://www.w3.org/2000/svg" data-img-replace="/images/icons/search_icon_lg.png"
+                     viewBox="0 0 13.47 13.47">
+                  <defs>
+                    <style>
+                      .sline {
+                          stroke-width: 1.6px;
+                      }
+                    </style>
+                  </defs>
+                  <title>searchicon</title>
+                  <path class="spath"
+                        d="M5.56,1.85A3.76,3.76,0,1,1,1.8,5.61,3.77,3.77,0,0,1,5.56,1.85m0-1.6a5.36,5.36,0,1,0,5.36,5.36A5.36,5.36,0,0,0,5.56.25Z"
+                        transform="translate(-0.2 -0.25)"/>
+                  <line class="sline" x1="12.9" y1="12.9" x2="8.88" y2="8.88"/>
+                </svg>
+              </span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="background-overlay"></div>
+<div id="container">
+
+
+<div id="container-down">
+
+<div class="container-content">
+
+<aside class="html5-aside"></aside>  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    
+<div class="blog detail">
+    <h1 class="blog-title">List of User-Agent strings</h1>
+    <div class="blog-entry-details">
+        <p></p>
+        <p class="byline">Published: 15 May 2022</p>
+    </div>
+</div>
+
+<div class="post">
+    <div class="post-excerpt">
+        <div class="field field-name-body field-type-text-with-summary field-label-hidden"><span class="field-items"><span class="field-item even" property="content:encoded"><p>The User-Agent (UA) string is contained in the HTTP headers and is intended to identify devices requesting online content. The User-Agent tells the server what the visiting device is (among many other things) and this information can be used to determine what content to return. Of course this requires using a <a href="https://deviceatlas.com/device-detection" target="_blank">device detection</a> solution which translates UAs into understandable software and hardware information.</p>
+<p><img alt="" src="/sites/deviceatlas.com/files/images/Overview_Device_Intelligence_DeviceAtlas_-_2018-03-08_12.24.14.png" style="width: 100%" /></p>
+<div>We go into a lot more detail, and examine what makes up a UA, and how you can use user-agent parsing to your advantage, in our article <a href="https://deviceatlas.com/blog/user-agent-parsing-how-it-works-and-how-it-can-be-used" target="_blank">User-Agent Parsing: How It Works And How Can It Be Used</a>.</div>
+<div>&nbsp;</div>
+<h3>User-Agent list for different device types</h3>
+<p>There are millions of User-Agent combinations given that UAs change with the software and hardware. For example, a Chrome browser on an iPhone 6 will introduce itself using a different UA than a Safari browser on the same phone.</p>
+<p>Every device type, including phones, tablets, desktops, may come with its own UA that makes it possible to detect this device for any purpose. Interestingly bots and crawlers also come with their unique UAs.</p>
+<p>Here is a list of example User-Agents for different device types that can be detected. If you&rsquo;d like to learn more on these devices, just copy and paste the UAs to our <a href="https://deviceatlas.com/device-data/user-agent-tester" target="_blank">User-Agent testing tool</a>. You&rsquo;ll see all the properties of a detected device.</p>
+<div class="pure-g"><div class="pure-u-12-24"><ul><li><a href="#android">Android User Agents</a></li>
+			<li><a href="#iphone">iPhone User Agents</a></li>
+			<li><a href="#windows">MS Windows User Agents</a></li>
+			<li><a href="#tablet">Tablet User Agents</a></li>
+			<li><a href="#desktop">Desktop User Agents</a></li>
+		</ul>
+	</div>
+	<div class="pure-u-12-24"><ul><li><a href="#settop">Set Top Box User Agents</a><a name="android"></a></li>
+			<li><a href="#consoles">Games Console User Agents</a></li>
+			<li><a href="#bots">Bots and Crawlers User Agents</a></li>
+			<li><a href="#ereader">E-Readers User Agents</a><p>&nbsp;</p>
+			</li>
+		</ul>
+	</div>
+</div>
+<h2>Android Mobile User Agents</h2>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Samsung Galaxy S22</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 12; SM-S906N Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.119 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Samsung Galaxy S21</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 10; SM-G996U Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Samsung Galaxy S20</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 10; SM-G980F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Samsung Galaxy S10</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 9; SM-G973U Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Samsung Galaxy S9</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 8.0.0; SM-G960F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Samsung Galaxy S8</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 7.0; SM-G892A Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/60.0.3112.107 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Samsung Galaxy S7</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Samsung Galaxy S7 Edge</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 6.0.1; SM-G935S Build/MMB29K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Samsung Galaxy S6</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 6.0.1; SM-G920V Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Samsung Galaxy S6 Edge Plus</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 5.1.1; SM-G928X Build/LMY47X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.83 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Google Pixel 6</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 12; Pixel 6 Build/SD1A.210817.023; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.4606.71 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table><table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Google Pixel 5</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 11; Pixel 5 Build/RQ3A.210805.001.A1; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.159 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Google Pixel 4</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 10; Google Pixel 4 Build/QD1A.190821.014.C2; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Google Pixel 3</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 10; Google Pixel 4 Build/QD1A.190821.014.C2; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Google Pixel 2</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 8.0.0; Pixel 2 Build/OPD1.170811.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/59.0.3071.125 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Google Pixel</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 7.1.1; Google Pixel Build/NMF26F; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/54.0.2840.85 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Nexus 6P</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 6.0.1; Nexus 6P Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.83 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Sony Xperia 1</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 9; J8110 Build/55.0.A.0.552; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/71.0.3578.99 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Sony Xperia XZ</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 7.1.1; G8231 Build/41.2.A.0.219; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/59.0.3071.125 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Sony Xperia Z5</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 6.0.1; E6653 Build/32.2.A.0.253) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>HTC Desire 21 Pro 5G</th>
+	</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 10; HTC Desire 21 pro 5G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>HTC U20 5G</th>
+	</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 10; Wildfire U20 5G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>HTC One X10</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 6.0; HTC One X10 Build/MRA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/61.0.3163.98 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>HTC One M9<a name="iphone"></a></th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 6.0; HTC One M9 Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.3</td>
+		</tr>
+	</tbody>
+</table>
+<p>If you&#39;re wondering which devices are most common where you are, read our list of the <a href="https://deviceatlas.com/blog/most-popular-android-smartphones" target="_blank">world&#39;s most popular Android devices</a>.</p>
+<h2>iPhone User Agents</h2>
+<p>Below are examples of User Agent strings used by the <a href="https://deviceatlas.com/blog/most-popular-iphones" target="_blank">most popular iPhone devices</a>. As Apple do not pass much info through the User Agent, version numbers don&#39;t allow us differentiate between iPhone models.</p>
+<p>However, with <a href="https://deviceatlas.com/blog/how-to-use-client-side-component-for-device-detection" target="_blank">DeviceAtlas client-side</a>, you can classify these user agents to return correct device model.</p>
+<div style="background-color: #e3f0f5; border: thin solid #72b6cf; padding-top: 0px; padding-right: 25px; padding-bottom: 0px; padding-left: 25px; width:90%;margin-left:0%;margin-right:5%"><p style="font-size: 18px; color: #36312c;"><center><strong>The Complete Guide To User Agents.</strong></center></p>
+	<p>Download our free e-book on User Agents to learn:<img alt="" src="/sites/deviceatlas.com/files/images/Ua-guide-cover%20%281%29.png" style="width: 25%; float: right;" /></p>
+	<ul><li>What is a User Agent?</li>
+		<li>How do you parse them?</li>
+		<li>What can you do with them?</li>
+	</ul>
+	<center><p style="font-size: 20px; color: #36312c"><a class="pill-button pill-blue-button" href="https://info.deviceatlas.com/complete-guide-to-user-agents/?blog-cta-user-agent-guide" style="margin:5;text-align:center;" target="blank">Download the Free Guide</a></p>
+	</center>
+<br></br>
+</div>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Apple iPhone SE (3rd generation)</th>
+	</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (iPhone14,6; U; CPU iPhone OS 15_4 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/19E241 Safari/602.1</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>iPhone 13 Pro Max</th>
+	</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (iPhone14,3; U; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/19A346 Safari/602.1</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>iPhone 12</th>
+	</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (iPhone13,2; U; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/15E148 Safari/602.1</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>iPhone 11</th>
+	</tr>
+	</thead>
+	<tbody><tr><td> Mozilla/5.0 (iPhone12,1; U; CPU iPhone OS 13_0 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/15E148 Safari/602.1</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>iPhone 11</th>
+	</tr>
+	</thead>
+	<tbody><tr><td> Mozilla/5.0 (iPhone12,1; U; CPU iPhone OS 13_0 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/15E148 Safari/602.1</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Apple iPhone XR (Safari)</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Apple iPhone XS (Chrome)</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/69.0.3497.105 Mobile/15E148 Safari/605.1</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Apple iPhone XS Max (Firefox)</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/13.2b11866 Mobile/16A366 Safari/605.1.15</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Apple iPhone X</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Apple iPhone 8</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) Version/11.0 Mobile/15A5341f Safari/604.1</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Apple iPhone 8 Plus</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A5370a Safari/604.1</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Apple iPhone 7</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (iPhone9,3; U; CPU iPhone OS 10_0_1 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/14A403 Safari/602.1</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Apple iPhone 7 Plus</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (iPhone9,4; U; CPU iPhone OS 10_0_1 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/14A403 Safari/602.1<a name="windows"></a></td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Apple iPhone 6</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Apple-iPhone7C2/1202.466; U; CPU like Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Version/3.0 Mobile/1A543 Safari/419.3</td>
+		</tr>
+	</tbody>
+</table>
+<h2>MS Windows Phone User Agents</h2>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Microsoft Lumia 650</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Microsoft; RM-1152) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Mobile Safari/537.36 Edge/15.15254</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Microsoft Lumia 550</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Microsoft; RM-1127_16056) AppleWebKit/537.36(KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/12.10536<a name="tablet"></a></td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Microsoft Lumia 950</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Microsoft; Lumia 950) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.1058</td>
+		</tr>
+	</tbody>
+</table>
+<h2>Tablet User Agents</h2>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Samsung Galaxy Tab S8 Ultra</th>
+	</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 12; SM-X906C Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.119 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Lenovo Yoga Tab 11</th>
+	</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 11; Lenovo YT-J706X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Google Pixel C</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 7.0; Pixel C Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/52.0.2743.98 Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Sony Xperia Z4 Tablet</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 6.0.1; SGP771 Build/32.2.A.0.253; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/52.0.2743.98 Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Nvidia Shield Tablet K1</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 6.0.1; SHIELD Tablet K1 Build/MRA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Samsung Galaxy Tab S3</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 7.0; SM-T827R4 Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.116 Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Samsung Galaxy Tab A</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 5.0.2; SAMSUNG SM-T550 Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/3.3 Chrome/38.0.2125.102 Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Amazon Kindle Fire HDX 7</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 4.4.3; KFTHWI Build/KTU84M) AppleWebKit/537.36 (KHTML, like Gecko) Silk/47.1.79 like Chrome/47.0.2526.80 Safari/537.36<a name="desktop"></a></td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>LG G Pad 7.0</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 5.0.2; LG-V410/V41020c Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/34.0.1847.118 Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<p>If you&#39;re looking for a list of mobile browser user-agents, we&#39;ve got them too - <a href="https://deviceatlas.com/blog/mobile-browser-user-agent-strings" target="_blank">List Of Mobile Browser User-Agent Strings</a> .</p>
+<h2>Desktop User Agents</h2>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Windows 10-based PC using Edge browser</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Chrome OS-based laptop using Chrome browser (Chromebook)</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.64 Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Mac OS X-based computer using a Safari browser</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/601.3.9 (KHTML, like Gecko) Version/9.0.2 Safari/601.3.9</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Windows 7-based PC using a Chrome browser</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36<a name="settop"></a></td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Linux-based PC using a Firefox browser</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1</td>
+		</tr>
+	</tbody>
+</table>
+
+<div style="background-color: #e3f0f5; border: thin solid #72b6cf; padding-top: 0px; padding-right: 25px; padding-bottom: 0px; padding-left: 25px; width:90%;margin-left:0%;margin-right:5%"><p style="font-size: 18px; color: #36312c;"><center><strong>Bring device intelligence to your web applications in minutes.</strong></p>
+<p>For the web, native apps and mobile operator environments.</p></center>
+<center><p style="font-size: 20px; color: #36312c"><a class="pill-button pill-blue-button" href="https://deviceatlas.com/pricing?blog-cta-pricing" target="blank" style="margin:5;text-align:center;">Compare options and pricing</a></p></center>
+</div>
+
+
+<h2>Set Top Boxes User Agents</h2>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Google ADT-2</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Dalvik/2.1.0 (Linux; U; Android 9; ADT-2 Build/PTT5.181126.002)</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Chromecast</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Roku Ultra</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Roku4640X/DVP-7.70 (297.70E04154A)</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Minix NEO X5</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; U; Android 4.2.2; he-il; NEO-X5-116A Build/JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Amazon AFTWMST22</th>
+	</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 9; AFTWMST22 Build/PS7233; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.152 Mobile Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Amazon 4K Fire TV</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; Android 5.1; AFTS Build/LMY47O) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/41.99900.2250.0242 Safari/537.36</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Google Nexus Player</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Dalvik/2.1.0 (Linux; U; Android 6.0.1; Nexus Player Build/MMB29T)</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Apple TV 6th Gen 4K</th>
+	</tr>
+	</thead>
+	<tbody><tr><td>AppleTV11,1/11.1</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Apple TV 5th Gen 4K</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>AppleTV6,2/11.1<a name="consoles"></a></td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Apple TV 4th Gen</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>AppleTV5,3/9.1.1</td>
+		</tr>
+	</tbody>
+</table>
+<h2>Game Consoles User Agents</h2>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Playstation 5</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (PlayStation; PlayStation 5/2.26) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0 Safari/605.1.15</td>
+		</tr>
+	</tbody>
+</table><table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Playstation 4</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (PlayStation 4 3.11) AppleWebKit/537.73 (KHTML, like Gecko)</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Playstation Vita</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (PlayStation Vita 3.61) AppleWebKit/537.73 (KHTML, like Gecko) Silk/3.2<a name="bots"></a></td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Xbox Series X</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Windows NT 10.0; Win64; x64; Xbox; Xbox Series X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.82 Safari/537.36 Edge/20.02</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Xbox One S</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Windows NT 10.0; Win64; x64; XBOX_ONE_ED) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Xbox One</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.10586</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Nintendo Switch</th>
+	</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Nintendo Switch; WifiWebAuthApplet) AppleWebKit/601.6 (KHTML, like Gecko) NF/4.0.0.5.10 NintendoBrowser/5.1.0.13343</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Nintendo Wii U</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Nintendo WiiU) AppleWebKit/536.30 (KHTML, like Gecko) NX/3.0.4.2.12 NintendoBrowser/4.3.1.11264.US</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Nintendo 3DS</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Nintendo 3DS; U; ; en) Version/1.7412.EU</td>
+		</tr>
+	</tbody>
+</table>
+<h2>Bots and Crawlers User Agents</h2>
+<p>We&#39;ve compiled a more in-depth list of <a href="https://deviceatlas.com/blog/most-active-bots-and-crawlers-web">User-Agent strings of the most active web crawlers and bots</a>.</p>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Google bot</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Bing bot</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)<a name="ereader"></a></td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Yahoo! bot</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</td>
+		</tr>
+	</tbody>
+</table>
+<h2>E Readers User Agents</h2>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Amazon Kindle 4</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (X11; U; Linux armv7l like Android; en-us) AppleWebKit/531.2+ (KHTML, like Gecko) Version/5.0 Safari/533.2+ Kindle/3.0+</td>
+		</tr>
+	</tbody>
+</table>
+<table class="table table-striped" style="margin: 0px auto 1em; width: 100%;"><thead><tr><th>Amazon Kindle 3</th>
+		</tr>
+	</thead>
+	<tbody><tr><td>Mozilla/5.0 (Linux; U; en-US) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) Version/4.0 Kindle/3.0 (screen 600x800; rotate)</td>
+		</tr>
+	</tbody>
+</table>
+<h2>Learn more about User-Agents</h2>
+<p>If you&#39;re looking for more information on User-Agents, be sure to read these posts on the DeviceAtlas blog:</p>
+<ul><li><a href="https://deviceatlas.com/blog/user-agent-parsing-how-it-works-and-how-it-can-be-used">How User-Agent parsing works and how it can be used</a></li>
+	<li><a href="https://deviceatlas.com/blog/mobile-browser-user-agent-strings">List of Mobile Browser User Agents</a></li>
+	<li><a href="https://deviceatlas.com/blog/user-agent-string-analysis">User-Agent string Analysis</a></li>
+	<li><a href="https://deviceatlas.com/blog/device-database-user-agent-strings">Building device databases with User-Agent strings</a></li>
+	<li><a href="https://deviceatlas.com/blog/how-to-change-user-agent-in-desktop-browser">How to switch UA in your desktop browser</a></li>
+</ul>
+</span></span></div>            </div>
+</div>
+  </div>
+</div>
+<div id="block-block-6" class="block block-block">
+
+    
+  <div class="content">
+    <div class="blog-tags"><h4>Related tags</h4><hr/><a class="blog-tag" href="/blog/tag/user-agent-strings">User-Agent strings</a><a class="blog-tag" href="/blog/tag/mobile-device-detection">mobile device detection</a></div>  </div>
+</div>
+<div id="block-block-5" class="block block-block">
+
+    
+  <div class="content">
+    <div class="latest-papers"><div><h3>Latest guides and reports</h3></div></div>  </div>
+</div>
+  </div>
+
+</div> <!-- /container-content -->
+
+<aside id="asideright" class="html5-aside">  <div class="region region-sidebar-right">
+    <div id="block-block-4" class="block block-block">
+
+    
+  <div class="content">
+    <style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+
+body.page-taxonomy-term div#container-down div.container-content h1 {margin: 56px 0 56px 20.83333335%;line-height: 1.65386em;}
+.blog h2 {line-height: 1.65386em}
+.node-type-blog .blog-entry-details .byline {display: none;}
+/*--><!]]>*/
+</style>
+<div class="blog-categories"><h3>Read more about</h3>
+	<nav> <a href="/blog/category/client-hints"><svg height="38" viewbox="0 0 38 38" width="38" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#22a0c7"><path d="M27.87 28.23H5.7L4 23.52 21 9.27zm-23.7 1.49l1.53-1.35L4 23.65l-2-.06z" stroke-linejoin="round"></path><path d="M25.67 13.42a7 7 0 0 1 3.22 8.82m-1.81-11.88a10.34 10.34 0 0 1 4.83 13.31M28.5 7.39a13.67 13.67 0 0 1 6.44 17.68" stroke-linecap="round"></path><path d="M15.54 27.83v1.65a1.12 1.12 0 0 1-1.1 1.12h-4.1a1.13 1.13 0 0 1-1.13-1.13v-1.64" stroke-linejoin="round"></path></g></svg> Client Hints </a><a href="/blog/category/device-detection"><svg height="38" viewbox="0 0 38 38" width="38" xmlns="http://www.w3.org/2000/svg"> <g fill="none" stroke="#22a0c7" stroke-width="2"> <circle cx="16.03" cy="16.03" r="8.91"></circle> <path d="M22.34 22.37l8.18 8.17" stroke-linecap="round"></path> </g> </svg> Device Detection </a> <a href="/blog/category/device-landscape"> <svg height="38" viewbox="0 0 38 38" width="38" xmlns="http://www.w3.org/2000/svg"> <rect fill="none" height="25.88" rx="1.6" ry="1.6" stroke="#22a0c7" width="15.28" x="18.19" y="4.08"></rect> <path d="M18.33 25h15" fill="none" stroke="#22a0c7"></path> <path d="M18.33 8h15" fill="none" stroke="#22a0c7"></path> <circle cx="24.07" cy="5.98" fill="#22a0c7" r=".5"></circle> <path d="M26.4 6H28" fill="none" stroke="#22a0c7" stroke-linecap="round"></path> <circle cx="25.83" cy="27.46" fill="#22a0c7" r="1.19"></circle> <path d="M29.91 31.54V32a1.58 1.58 0 0 1-1.58 1.58H5.61A1.58 1.58 0 0 1 4 32V19.9a1.58 1.58 0 0 1 1.58-1.58h11M25 33.46v-1.89" fill="none" stroke="#22a0c7" stroke-linecap="round"></path> <path d="M8 33.46v-15" fill="none" stroke="#22a0c7"></path> <circle cx="5.93" cy="27.72" fill="#22a0c7" r=".5"></circle> <path d="M6 25.39v-1.58" fill="none" stroke="#22a0c7" stroke-linecap="round"></path> </svg> Device Landscape </a> <a href="/blog/category/user-agent-parsing"> <svg height="38" viewbox="0 0 38 38" width="38" xmlns="http://www.w3.org/2000/svg"> <g fill="none" stroke="#22a0c7" stroke-width="2"> <circle cx="16.03" cy="16.03" r="8.91"></circle> <path d="M22.34 22.37l8.18 8.17" stroke-linecap="round"></path> </g> </svg> User-Agent Parsing </a> <a href="/blog/category/mobile-statistics"> <svg height="38" viewbox="0 0 38 38" width="38" xmlns="http://www.w3.org/2000/svg"> <g fill="none" stroke="#22a0c7"> <path d="M34 19.79A13 13 0 0 1 30.29 29l-9.07-9.17 9.14-9.14a13 13 0 0 1 3.64 9.1zm-4.44-10.7l-9.14 9.12V5.15a13.05 13.05 0 0 1 9.14 3.94z"></path> <path d="M27.83 29a13.06 13.06 0 1 1-9.24-22.3v13.09z"></path> </g> </svg> Mobile Statistics </a> <a href="/blog/category/mobile-web-design"> <svg height="38" viewbox="0 0 38 38" width="38" xmlns="http://www.w3.org/2000/svg"> <rect fill="none" height="20.58" rx="1.6" ry="1.6" stroke="#22a0c7" width="11.08" x="22.35" y="12.59"></rect> <path d="M22.35 14.71h11.08v15.9H22.35z" fill="none" stroke="#22a0c7"></path> <path d="M21.19 33.17H6.93a2.38 2.38 0 0 1-2.37-2.37V7a2.38 2.38 0 0 1 2.37-2.33h17.42A2.38 2.38 0 0 1 26.73 7v4" fill="none" stroke="#22a0c7" stroke-linecap="round"></path> <path d="M20.77 29.81H6.93V7.65h17.42v3.38" fill="none" stroke="#22a0c7" stroke-linecap="round"></path> <circle cx="15.33" cy="31.62" fill="#22a0c7" r="1"></circle> <circle cx="27.89" cy="31.95" fill="#22a0c7" r="1"></circle> <path d="M23.12 8.71V11a2.48 2.48 0 0 0-2.37 2.38v2.1H8.16V8.71zM20 17.85v1.58H9v-1.58zm.79-.79H8.16v3.17h12.67zM20 22.6v1.58H9V22.6zm.79-.79H8.16V25h12.67z" fill="#22a0c7"></path> <path d="M23.54 15.62h8.68v5.11h-8.68z" fill="#22a0c7"></path> <path d="M31.44 22.32v.79h-7.13v-.79zm.79-.79h-8.71v2.37h8.71zm-.79 3.96v.79h-7.13v-.79zm.79-.79h-8.71v2.38h8.71z" fill="#22a0c7"></path> </svg> Mobile Web Design </a> <a href="/blog/category/press-releases"> <svg height="38" viewbox="0 0 38 38" width="38" xmlns="http://www.w3.org/2000/svg"> <g fill="none" stroke="#22a0c7"> <path d="M27.87 28.23H5.7L4 23.52 21 9.27zm-23.7 1.49l1.53-1.35L4 23.65l-2-.06z" stroke-linejoin="round"></path> <path d="M25.67 13.42a7 7 0 0 1 3.22 8.82m-1.81-11.88a10.34 10.34 0 0 1 4.83 13.31M28.5 7.39a13.67 13.67 0 0 1 6.44 17.68" stroke-linecap="round"></path> <path d="M15.54 27.83v1.65a1.12 1.12 0 0 1-1.1 1.12h-4.1a1.13 1.13 0 0 1-1.13-1.13v-1.64" stroke-linejoin="round"></path> </g> </svg> Press Releases and Events </a> <a href="/blog/category/reports"> <svg height="38" viewbox="0 0 38 38" width="38" xmlns="http://www.w3.org/2000/svg"> <path d="M4 31.75h30.08" fill="none" stroke="#22a0c7"></path> <path d="M8.65 20.14v10h-3.9v-10h3.9zm0-.79h-3.9a.79.79 0 0 0-.79.79v10.8h5.46v-10.8a.79.79 0 0 0-.79-.79zm8.2-10.8v21.6H13V8.55zm0-.79H13a.79.79 0 0 0-.79.79v22.39h5.46V8.55a.79.79 0 0 0-.82-.79zM25 14.35v15.83h-3.85V14.35zm0-.79h-3.85a.79.79 0 0 0-.79.79V31h5.46V14.35a.79.79 0 0 0-.82-.8zm8.25-7.91v24.5h-3.88V5.65zm0-.79h-3.88a.79.79 0 0 0-.79.79v25.29H34V5.65a.79.79 0 0 0-.75-.79z" fill="#22a0c7"></path> </svg> Reports </a> <a href="/blog/category/whitepapers"> <svg height="38" viewbox="0 0 38 38" width="38" xmlns="http://www.w3.org/2000/svg"> <rect fill="none" height="28.5" rx="1.6" ry="1.6" stroke="#22a0c7" width="24.54" x="6.74" y="7.71"></rect> <path d="M6.74 9.5V5.41A2.37 2.37 0 0 1 9.11 3H28.9a2.38 2.38 0 0 1 2.38 2.37v.83" fill="none" stroke="#22a0c7" stroke-linecap="round"></path> <path d="M6.74 5.41s0 2.3 3.1 2.3h-3.1z" fill="#22a0c7" stroke="#22a0c7"></path> <path d="M13.68 21.91v1.74h-.93v-5h1.58a2.83 2.83 0 0 1 .86.12 1.65 1.65 0 0 1 .6.32 1.28 1.28 0 0 1 .35.5 1.87 1.87 0 0 1 0 1.3 1.36 1.36 0 0 1-.36.51 1.68 1.68 0 0 1-.6.33 2.65 2.65 0 0 1-.84.12zm0-.72h.69a1.4 1.4 0 0 0 .44-.06.79.79 0 0 0 .31-.18.74.74 0 0 0 .18-.29 1.09 1.09 0 0 0 .06-.38 1 1 0 0 0-.06-.36.71.71 0 0 0-.18-.28.79.79 0 0 0-.31-.17 1.46 1.46 0 0 0-.44-.06h-.69zm7.69-.02a2.68 2.68 0 0 1-.15 1 2.24 2.24 0 0 1-1.3 1.3 2.77 2.77 0 0 1-1 .18H17v-5h1.9a2.75 2.75 0 0 1 1 .18 2.32 2.32 0 0 1 .79.51 2.28 2.28 0 0 1 .51.79 2.68 2.68 0 0 1 .16 1zm-.94 0a2.28 2.28 0 0 0-.11-.73 1.58 1.58 0 0 0-.31-.55 1.34 1.34 0 0 0-.49-.35 1.69 1.69 0 0 0-.65-.12h-.93v3.49h1a1.69 1.69 0 0 0 .65-.12 1.35 1.35 0 0 0 .49-.35 1.58 1.58 0 0 0 .31-.55 2.28 2.28 0 0 0 .11-.74zm4.82-2.48v.74h-2.19v1.46h1.85v.74h-1.85v2.02h-.89v-4.96h3.08" fill="#22a0c7"></path> </svg> Whitepapers </a></nav>
+</div>
+<p> </p>
+  </div>
+</div>
+  </div>
+</aside>
+</div> <!-- /container-down -->
+
+</div><!-- /container -->
+
+<div id="footer">
+    <div>
+        <div class="pure-g links">
+            <div class="pure-u-18-24">
+                <ul>
+                    <li><a href="/about-us">About Us</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li class="last"><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+                </ul>
+            </div>
+            <div class="pure-u-6-24">
+                <a itemprop="sameAs" id="schema-twitter" target="blank" href="https://twitter.com/Device_Atlas">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                         data-img-replace="/images/icons/twitter.png" viewBox="0 0 28 28">
+                        <title>DeviceAtlas Twitter</title>
+                        <path fill="#b0b1b1"
+                              d="M28 5.32a11.77 11.77 0 0 1-3.3.9A5.8 5.8 0 0 0 27.24 3a11.79 11.79 0 0 1-3.65 1.4 5.74 5.74 0 0 0-9.94 3.93 5.92 5.92 0 0 0 .15 1.31 16.36 16.36 0 0 1-11.85-6 5.6 5.6 0 0 0-.78 2.88 5.75 5.75 0 0 0 2.55 4.78 5.79 5.79 0 0 1-2.61-.72v.08a5.75 5.75 0 0 0 4.61 5.63 5.85 5.85 0 0 1-1.51.2 5.25 5.25 0 0 1-1.09-.11 5.77 5.77 0 0 0 5.36 4 11.55 11.55 0 0 1-7.13 2.47A11.51 11.51 0 0 1 0 22.81a16.31 16.31 0 0 0 8.81 2.58c10.56 0 16.35-8.76 16.35-16.35V8.3A11.79 11.79 0 0 0 28 5.32z"/>
+                    </svg>
+                </a>
+                <a itemprop="sameAs" id="schema-linkedIn" target="blank"
+                   href="https://www.linkedin.com/company/deviceatlas/" rel="publisher">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="30" viewBox="0 0 43 20">
+                        <title>DeviceAtlas LinkedIn</title>
+                        <path fill="#b0b1b1"
+                              d="M29.2,0.1H8.8c-1,0-1.8,0.8-1.8,1.7v20.4c0,0.9,0.8,1.7,1.8,1.7h20.3c1,0,1.8-0.8,1.8-1.7V1.8 C30.9,0.8,30.1,0.1,29.2,0.1z M14.1,20.4h-3.5V9h3.5V20.4z M12.4,7.5c-1.1,0-2.1-0.9-2.1-2.1c0-1.1,0.9-2.1,2.1-2.1 c1.1,0,2.1,0.9,2.1,2.1C14.4,6.5,13.5,7.5,12.4,7.5z M27.4,20.4h-3.5v-5.5c0-1.3,0-3-1.8-3c-1.8,0-2.1,1.4-2.1,2.9v5.6h-3.5V9 h3.4v1.6h0c0.5-0.9,1.6-1.8,3.3-1.8c3.6,0,4.2,2.4,4.2,5.4V20.4z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="pure-g afilias-links">
+            <div class="pure-u-5-5 pure-u-md-3-24 pure-u-lg-4-24"><h4>Other Products</h4></div>
+            <div class="pure-u-5-5 pure-u-md-6-24 pure-u-lg-5-24">
+                <p>Accurately Identify Counterfeit Devices<br/>
+                    <a href="http://www.deviceassure.com" target="_blank">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" height="38"
+                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 113.7 28" style="enable-background:new 0 0 113.7 28;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0 {
+                                        fill: #FFFFFF;
+                                    }
+
+                                    .st1 {
+                                        fill: url(#SVGID_1_);
+                                    }
+                                </style>
+                            <title>DeviceAssure</title>
+                            <g>
+                                <g>
+                                    <path class="st0" d="M4.7,1.7c2.2,0,4,0.7,5.4,1.9s2,3,2,5s-0.7,3.8-2,5s-3.2,1.9-5.4,1.9H0V1.7H4.7z M2.8,13.4h1.9
+                                c1.4,0,2.6-0.4,3.4-1.3s1.2-2,1.2-3.5c0-1.5-0.4-2.6-1.2-3.5c-0.8-0.9-2-1.3-3.4-1.3H2.8V13.4z"/>
+                                    <path class="st0" d="M17.4,15.6c-1.6,0-2.9-0.5-3.9-1.6S12,11.7,12,9.9s0.5-3.1,1.5-4.1c1-1,2.3-1.5,3.9-1.5s2.9,0.5,4,1.5
+                                s1.6,2.3,1.6,4c0,0.4,0,0.7-0.1,1.1h-8c0.1,0.7,0.3,1.3,0.8,1.7c0.5,0.4,1,0.7,1.8,0.7c1,0,1.7-0.4,2.1-1.2h3
+                                c-0.3,1-0.9,1.9-1.8,2.6C19.8,15.3,18.7,15.6,17.4,15.6z M19.2,7.4c-0.5-0.4-1.1-0.7-1.8-0.7c-0.7,0-1.3,0.2-1.7,0.7
+                                c-0.5,0.4-0.7,1-0.8,1.7h5.2C20,8.4,19.7,7.8,19.2,7.4z"/>
+                                    <path class="st0" d="M22.2,4.5h3l2.8,8.6l2.8-8.6h3l-4,11h-3.5L22.2,4.5z"/>
+                                    <path class="st0" d="M36.9,1.7c0,0.5-0.2,0.9-0.5,1.2c-0.3,0.3-0.7,0.5-1.2,0.5S34.4,3.3,34,3c-0.3-0.3-0.5-0.7-0.5-1.2
+                                s0.2-0.9,0.5-1.2C34.4,0.2,34.7,0,35.2,0c0.5,0,0.9,0.2,1.2,0.5C36.7,0.8,36.9,1.3,36.9,1.7z M33.8,15.5v-11h2.8v11H33.8z"/>
+                                    <path class="st0" d="M38.7,14.1c-1-1-1.5-2.4-1.5-4.1s0.5-3.1,1.5-4.1c1-1,2.3-1.6,3.9-1.6c1.3,0,2.4,0.3,3.3,1
+                                c0.9,0.7,1.5,1.6,1.8,2.7h-3c-0.3-0.9-1.1-1.3-2.1-1.3c-0.8,0-1.4,0.3-1.9,0.9C40.3,8.2,40,9,40,10s0.2,1.8,0.7,2.4
+                                c0.4,0.6,1.1,0.9,1.9,0.9c1,0,1.8-0.5,2.1-1.4h3c-0.3,1.1-0.9,2-1.8,2.7c-0.9,0.7-2,1-3.3,1C41,15.6,39.7,15.1,38.7,14.1z"/>
+                                    <path class="st0" d="M52.9,15.6c-1.6,0-2.9-0.5-3.9-1.6c-1-1-1.5-2.4-1.5-4.1S48,6.9,49,5.9c1-1,2.3-1.5,3.9-1.5
+                                c1.6,0,2.9,0.5,4,1.5c1,1,1.6,2.3,1.6,4c0,0.4,0,0.7-0.1,1.1h-8c0.1,0.7,0.3,1.3,0.8,1.7c0.5,0.4,1,0.7,1.8,0.7
+                                c1,0,1.7-0.4,2.1-1.2h3c-0.1,0.3-0.2,0.7-0.4,1c-0.3,0.6-1.4,0.3-2,0.7c-0.7,0.5-0.9,1.7-1.8,1.8C53.5,15.6,53.2,15.6,52.9,15.6z
+                                 M54.8,7.4c-0.5-0.4-1.1-0.7-1.8-0.7c-0.7,0-1.3,0.2-1.7,0.7c-0.5,0.4-0.7,1-0.8,1.7h5.2C55.5,8.4,55.3,7.8,54.8,7.4z"/>
+                                </g>
+
+                                <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="53.8498" y1="21.206"
+                                                x2="112.3028" y2="21.206" gradientTransform="matrix(1 0 0 -1 0 30)">
+                                    <stop offset="0" style="stop-color:#1E8CC9"/>
+                                    <stop offset="1" style="stop-color:#5BADD9"/>
+                                </linearGradient>
+                                <path class="st1" d="M64,15.6L63.1,13h-5.4c-0.4,0.7-0.9,1.2-1.4,1.6c-0.7,0.5-1.5,0.8-2.4,1l4.9-13.8h3.3l4.9,13.9H64z M58.5,10.9
+                                h4l-2-5.8L58.5,10.9z M66.5,7.9c0-1,0.4-1.7,1.2-2.4c0.8-0.7,1.9-1,3.2-1c1.3,0,2.4,0.3,3.2,1s1.2,1.5,1.3,2.6h-2.9
+                                c-0.1-0.9-0.7-1.4-1.7-1.4c-0.5,0-1,0.1-1.2,0.3c-0.3,0.2-0.4,0.5-0.4,0.9c0,0.4,0.2,0.7,0.7,0.9c0.4,0.2,1,0.4,1.6,0.5
+                                c0.6,0.1,1.3,0.3,1.9,0.4s1.1,0.5,1.6,1c0.4,0.5,0.7,1,0.7,1.8c0,1-0.4,1.8-1.3,2.4c-0.8,0.6-1.9,0.9-3.2,0.9s-2.4-0.3-3.2-0.9
+                                c-0.8-0.6-1.3-1.5-1.3-2.6h2.9c0.1,0.9,0.7,1.4,1.8,1.4c0.5,0,0.9-0.1,1.3-0.3c0.3-0.2,0.5-0.5,0.5-0.9c0-0.4-0.2-0.7-0.7-0.9
+                                c-0.4-0.2-1-0.4-1.6-0.5c-0.6-0.1-1.3-0.3-1.9-0.4c-0.6-0.2-1.1-0.5-1.6-0.9C66.7,9.2,66.5,8.6,66.5,7.9z M75.5,7.9
+                                c0-1,0.4-1.7,1.2-2.4c0.8-0.7,1.9-1,3.2-1c1.3,0,2.4,0.3,3.2,1c0.8,0.7,1.2,1.5,1.3,2.6h-2.9c-0.1-0.9-0.7-1.4-1.7-1.4
+                                c-0.5,0-1,0.1-1.2,0.3c-0.3,0.2-0.4,0.5-0.4,0.9c0,0.4,0.2,0.7,0.7,0.9s1,0.4,1.6,0.5c0.6,0.1,1.3,0.3,1.9,0.4
+                                c0.6,0.2,1.1,0.5,1.6,1c0.4,0.4,0.7,1,0.7,1.8c0,1-0.4,1.8-1.3,2.4c-0.8,0.6-1.9,0.9-3.2,0.9c-1.3,0-2.4-0.3-3.2-0.9
+                                c-0.8-0.6-1.3-1.5-1.3-2.6h2.9c0.1,0.9,0.7,1.4,1.8,1.4c0.5,0,0.9-0.1,1.3-0.3c0.3-0.2,0.5-0.5,0.5-0.9c0-0.4-0.2-0.7-0.7-0.9
+                                c-0.4-0.2-1-0.4-1.6-0.5c-0.6-0.1-1.3-0.3-1.9-0.4c-0.6-0.2-1.1-0.5-1.6-0.9C75.7,9.2,75.5,8.6,75.5,7.9z M92.7,4.6h2.8v11h-2.8V14
+                                c-0.7,1.2-1.8,1.8-3.4,1.8c-1.3,0-2.3-0.4-3-1.3s-1.2-2-1.2-3.4V4.6h2.8v6c0,0.9,0.2,1.5,0.7,2c0.4,0.5,1,0.7,1.8,0.7
+                                s1.3-0.2,1.8-0.7c0.4-0.5,0.7-1.1,0.7-2V4.6L92.7,4.6z M99.4,4.6v2c0.7-1.4,1.8-2.1,3.2-2.1v2.9H102c-0.8,0-1.5,0.2-1.9,0.6
+                                c-0.4,0.4-0.7,1.1-0.7,2.2v5.5h-2.8v-11H99.4z M106.8,15.8c-1.6,0-2.9-0.5-3.9-1.6c-1-1-1.5-2.4-1.5-4.1c0-1.7,0.5-3.1,1.5-4.1
+                                c1-1,2.3-1.5,3.9-1.5s2.9,0.5,4,1.5s1.6,2.3,1.6,4c0,0.4,0,0.7-0.1,1.1h-8c0.1,0.7,0.3,1.3,0.8,1.7c0.5,0.4,1,0.7,1.8,0.7
+                                c1,0,1.7-0.4,2.1-1.2h3c-0.3,1-0.9,1.9-1.8,2.6C109.2,15.5,108.1,15.8,106.8,15.8z M108.6,7.5c-0.5-0.4-1.1-0.7-1.8-0.7
+                                c-0.7,0-1.3,0.2-1.7,0.7c-0.5,0.4-0.7,1-0.8,1.7h5.2C109.4,8.5,109.1,7.9,108.6,7.5z"/>
+                            </g>
+                        </svg>
+                    </a>
+                </p>
+            </div>
+            <div class="pure-u-5-5 pure-u-md-6-24 pure-u-lg-5-24">
+                <p>Learn everything about mobile web technology<br/>
+                    <a href="http://www.mobiforge.com" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="160" height="32"
+                             data-img-replace="/images/icons/mobiForge-logo.png" class="responsive"
+                             viewBox="0 0 160 32">
+                            <title>mobiForge</title>
+                            <path fill="#fdb933"
+                                  d="M85.6 1.6v7.5h7a.43.43 0 0 1 .4.4v.8a.43.43 0 0 1-.4.4h-7v10.1a.46.46 0 0 1-.5.4H84a.43.43 0 0 1-.4-.4V.4c0-.2.2-.5.4-.5h10.1a.46.46 0 0 1 .4.5v.8a.43.43 0 0 1-.4.4zm9.3 11.9c0-5.4 2.5-8.3 7.1-8.3s7.1 3 7.1 8.2c0 5.5-2.5 8.5-7.1 8.5s-7.1-3.1-7.1-8.4zm2 0c0 4.4 1.9 7 5.2 7s5.1-2.5 5.1-6.9-1.8-7.1-5.1-7.1-5.2 2.5-5.2 7zm15 7.3v-15a.43.43 0 0 1 .4-.4h.8c.2 0 .4.1.4.3V6c0 .2.1.4.3.4a.37.37 0 0 0 .3-.1 10.25 10.25 0 0 1 4-1h.6c.5 0 .7.2.7.6v.7c0 .4-.2.5-.5.5h-.4a12 12 0 0 0-2.3-.3c-1.7 0-2.4.7-2.4 2.3v11.6a.43.43 0 0 1-.4.4h-1.1c-.2.2-.4 0-.4-.3zm9.5 4.9l.2.1a8 8 0 0 0 4.3 1.2c3.4 0 5.3-1.5 5.3-4.1V21c0-.3-.1-.4-.2-.4s-.1 0-.3.1a8.09 8.09 0 0 1-3.9 1c-4.3 0-7.3-3.2-7.3-8 0-5 3.1-8.4 7.5-8.4a8 8 0 0 1 3.7.9c.4.2.5.2.6.2a.22.22 0 0 0 .2-.2v-.3c0-.2.1-.3.4-.3h.8a.43.43 0 0 1 .4.4v15.8c0 2.8-.4 4-1.9 5.1a8.14 8.14 0 0 1-5.1 1.5 12.21 12.21 0 0 1-4.9-1c-.6-.3-.7-.4-.7-.7v-.6c0-.3.1-.5.3-.5a.37.37 0 0 1 .3.1h.3zm9.7-7.6V9c0-1.6-1.3-2.5-3.8-2.5-3.6 0-5.9 2.7-5.9 7a6.29 6.29 0 0 0 1.8 5 5.83 5.83 0 0 0 4.1 1.7c2.2 0 3.8-.9 3.8-2.1zm6.5-5.2c0 2.6.3 3.8 1.1 5a4.94 4.94 0 0 0 1.9 1.6 7.17 7.17 0 0 0 2.9.6 7.4 7.4 0 0 0 3.8-1.1 1.42 1.42 0 0 1 .6-.2c.2 0 .3.2.3.4v.6c0 .9-2.3 1.7-4.8 1.7-4.8 0-7.7-3.1-7.7-8.1s3-8.3 7.1-8.3a6.28 6.28 0 0 1 6.4 6.5v.8a.43.43 0 0 1-.4.4c-.1.1-11.2.1-11.2.1zm0-1.3h9.6c-.1-3.1-1.9-5.1-4.6-5.1s-4.7 2.1-5 5.1z"/>
+                            <path fill="#fff" d="M0 .4v20.5a.43.43 0 0 0 .4.4h20.5"/>
+                            <path fill="#fdb933"
+                                  d="M.4 0a.43.43 0 0 0-.4.4v15.7c0 .2.1.2.3.1l3.4-3.4a.45.45 0 0 1 .5 0l4 4a.45.45 0 0 1 0 .5l-3.6 3.6c-.1.1-.1.3.1.3h16.2a.43.43 0 0 0 .4-.4V.3a.43.43 0 0 0-.4-.4H.4z"/>
+                            <path fill="#fff"
+                                  d="M19.2 11.2l-9-9a2.42 2.42 0 0 0-3.5 0L2.8 6.1a2.42 2.42 0 0 0 0 3.5l2.5 2.5 3.5 3.5 3 3a2.42 2.42 0 0 0 3.5 0l3.9-3.9a2.42 2.42 0 0 0 0-3.5z"/>
+                            <path fill="#fff"
+                                  d="M25.2 6.5a.54.54 0 0 1 .5-.5h1.6c.5 0 .5.4.5.8h.1a3.81 3.81 0 0 0 1.5-.5 8.76 8.76 0 0 1 2.7-.6 5.85 5.85 0 0 1 4 1.5h.4a9.41 9.41 0 0 1 4.9-1.5c3.1 0 5.4 1.8 5.4 5.1v9.9a.54.54 0 0 1-.5.5h-1.9a.54.54 0 0 1-.5-.5V11a2.86 2.86 0 0 0-3.2-3.2 6.45 6.45 0 0 0-2 .3 1.66 1.66 0 0 0-1.3 1.8v10.8a.54.54 0 0 1-.5.5H35a.54.54 0 0 1-.5-.5V11c0-2.2-1.2-3.2-3.3-3.2a4.77 4.77 0 0 0-2 .4A1.48 1.48 0 0 0 28 9.9v10.8a.54.54 0 0 1-.5.5h-1.9a.54.54 0 0 1-.5-.5l.1-14.2zm29.7-.7c-4.8 0-7.2 3.4-7.3 8s2.6 8 7.4 8 7.2-3.5 7.2-8c0-4.7-2.4-8-7.3-8zm.1 13.8c-3.6 0-4.4-2.8-4.3-5.9s.7-5.9 4.3-5.9 4.3 2.9 4.3 5.9-.8 5.9-4.3 5.9zM69.8 5.7a7.22 7.22 0 0 0-3.2.8 1.49 1.49 0 0 1-.7.3V.4a.46.46 0 0 0-.4-.5h-1.9c-.2 0-.4.3-.4.5v17.1a6.48 6.48 0 0 0 3.3 3.2 8.19 8.19 0 0 0 3 .7c4.8 0 7.7-3.4 7.7-8s-2.8-7.7-7.4-7.7zm3.1 12.4a5.26 5.26 0 0 1-3.5 1.3c-1.1 0-3.3-.4-3.4-1.9V9.9a1.64 1.64 0 0 1 1.3-1.7 6.28 6.28 0 0 1 1.9-.3c3.5 0 5.2 2.3 5.2 5.6 0 1.7-.2 3.4-1.5 4.6z"/>
+                            <path fill="#fdb933"
+                                  d="M79.6 0a1.53 1.53 0 0 1 1.7 1.7 1.7 1.7 0 1 1-3.4 0A1.58 1.58 0 0 1 79.6 0z"/>
+                            <path fill="#fff"
+                                  d="M78.2 6.5c0-.2.2-.5.4-.5h1.9a.46.46 0 0 1 .4.5v14.3c0 .2-.2.5-.4.5h-1.9a.46.46 0 0 1-.4-.5z"/>
+                            <path fill="#fdb933"
+                                  d="M150.8 18.7h-.8a.1.1 0 0 1-.1-.1v-.1a.1.1 0 0 1 .1-.1h1.9a.1.1 0 0 1 .1.1v.1a.1.1 0 0 1-.1.1h-.8v2.5h-.3v-2.5zm1.7.1v2.4h-.3v-2.7a.1.1 0 0 1 .1-.1h.2c.1 0 .1 0 .1.1l.9 2.5.9-2.5a.1.1 0 0 1 .1-.1h.2a.1.1 0 0 1 .1.1v2.7a.1.1 0 0 1-.1.1h-.1a.1.1 0 0 1-.1-.1v-2.4l-.8 2.4-.1.1h-.1c-.1 0-.1 0-.1-.1l-.9-2.4z"/>
+                        </svg>
+                    </a>
+                </p>
+            </div>
+            <div class="pure-u-5-5 pure-u-md-6-24 pure-u-lg-5-24">
+                <p>Evaluate your websites’ mobile readiness<br/>
+                    <a href="http://www.mobiready.com" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="160" height="32"
+                             data-img-replace="/images/icons/mobiReady-logo.png" class="responsive"
+                             viewBox="-319 625 160 32">
+                            <title>mobiReady</title>
+                            <path fill="#FFF"
+                                  d="M-319 632.8c0-.2.2-.5.5-.5h1.6c.5 0 .5.4.5.8h.1c.6 0 1.1-.3 1.6-.5.8-.3 1.8-.5 2.7-.5 1.5 0 2.9.5 4 1.5h.4c1.4-.9 3.2-1.5 4.9-1.5 3.1 0 5.4 1.8 5.4 5.1v9.9c0 .2-.2.5-.5.5h-1.9c-.2 0-.5-.2-.5-.5v-9.7c0-2.1-1.1-3.2-3.2-3.2-.7 0-1.4.1-2 .3-.9.3-1.3.8-1.3 1.8v10.8c0 .2-.2.5-.5.5h-1.9c-.2 0-.5-.2-.5-.5v-9.6c0-2.2-1.2-3.2-3.3-3.2-.7 0-1.3.1-2 .4-.9.3-1.2.7-1.2 1.7v10.8c0 .2-.2.5-.5.5h-1.9c-.2 0-.5-.2-.5-.5v-14.4zm29.7-.7c4.9 0 7.3 3.3 7.3 7.9 0 4.5-2.4 8-7.2 8-4.8 0-7.4-3.4-7.4-8 0-4.5 2.5-7.9 7.3-7.9zm0 13.9c3.5 0 4.3-2.9 4.3-5.9 0-3-.8-5.9-4.3-5.9-3.6 0-4.3 2.9-4.3 5.9 0 3 .8 5.9 4.3 5.9zm8.3-2.1v-17.1c0-.2.2-.4.5-.4h1.9c.2 0 .5.2.5.4v6.4c.3 0 .5-.1.7-.3 1-.5 2.1-.8 3.2-.8 4.6 0 7.4 3.1 7.4 7.6 0 4.6-2.9 8-7.7 8-1 0-2-.3-3-.7-2.6-1-3.5-3.1-3.5-3.1zm6.2 1.8c1.2 0 2.5-.4 3.5-1.3 1.3-1.2 1.5-2.9 1.5-4.5 0-3.3-1.7-5.6-5.1-5.6-.6 0-1.3.1-1.9.3-.9.3-1.3.7-1.3 1.7v7.6c-.1 1.5 2.1 1.8 3.3 1.8z"/>
+                            <path fill="#00B2AB"
+                                  d="M-264.6 626.3c1.1 0 1.7.6 1.7 1.7 0 1.2-.6 1.7-1.7 1.7s-1.7-.6-1.7-1.7c0-1 .6-1.7 1.7-1.7z"/>
+                            <path fill="#FFF"
+                                  d="M-266 632.8c0-.2.2-.5.5-.5h1.9c.2 0 .5.2.5.5v14.3c0 .2-.2.5-.5.5h-1.9c-.2 0-.5-.2-.5-.5v-14.3z"/>
+                            <path fill="#00B2AB"
+                                  d="M-255.3 637.3l7.8 9.4.2.2c.1.1.1.1.1.2 0 .3-.2.4-.7.4h-1.2c-.1 0-.3-.1-.3-.2l-8.4-10.1-.2-.2c-.1 0-.2-.1-.2-.1h-.3V647c0 .2-.2.4-.5.4h-1.1c-.2 0-.4-.2-.4-.4v-20.4c0-.3.2-.5.4-.5h4.8c2.4 0 3.7.5 4.8 1.5 1.1 1 1.6 2.4 1.6 4 0 3.4-2.4 5.5-6.3 5.5h-.1zm-3.2-1.5h3.2c2.8 0 4.5-1.5 4.5-4s-1.7-3.8-4.5-3.8h-3.2v7.8zm13.2 3.4c0 2.6.3 3.8 1.1 5 .5.7 1.2 1.2 1.8 1.6.9.5 1.9.6 2.9.6 1.4 0 2.9-.4 3.8-1.1.2-.1.5-.2.6-.2.2 0 .3.2.3.4v.6c0 .9-2.3 1.7-4.8 1.7-4.7 0-7.7-3.1-7.7-8.1 0-4.9 3-8.3 7.1-8.3 3.7 0 6.4 2.8 6.4 6.5v.8c0 .3-.2.4-.4.4.1.1-11.1.1-11.1.1zm0-1.3h9.6c-.1-3.1-1.9-5.1-4.6-5.1-2.7 0-4.7 2.1-5 5.1zm24.2 9.7h-.7c-.3 0-.5-.1-.5-.4v-.2c0-.1-.1-.2-.3-.2-.1 0-.2.1-.6.2-1.7.7-2.7.9-3.8.9-3.2 0-5.3-1.6-5.3-4.2 0-2.2 1.3-3.5 4.8-4.7l3.9-1.4c.8-.3 1-.6 1-1.4v-.6c0-1.9-1.1-2.8-3.4-2.8-1.7 0-3.1.4-4.6 1.4-.1.1-.3.2-.4.2-.2 0-.3-.2-.3-.5v-.7c0-.3.2-.5.7-.7 1.5-.6 3.4-1 4.9-1 2 0 3.1.3 4 1.2.8.8 1 1.5 1 3.1v11.4c.1.2-.1.4-.4.4zm-1.5-8.9l-3.6 1.2c-3.1 1.1-4.2 2-4.2 3.8 0 1.7 1.4 2.8 3.5 2.8 2.7 0 4.3-.7 4.3-2v-5.8zm18-13.3v21.8c0 .2-.2.4-.4.4h-.8c-.3 0-.4-.1-.4-.4v-.2c0-.2-.1-.2-.2-.2s-.1 0-.4.2c-1.4.6-2.5.9-3.9.9-4.4 0-7.4-3.2-7.4-8 0-4.9 3.1-8.3 7.5-8.3 1.3 0 2.6.3 3.6.9.2.1.2.1.3.1.2 0 .2-.1.2-.3v-6.8c0-.2.2-.4.4-.4h1.1c.2-.1.4.1.4.3zm-2 19v-9.5c0-1.2-1.5-2-3.8-2-3.7 0-5.9 2.5-5.9 6.8s2.2 6.8 5.9 6.8c2.4 0 3.8-.8 3.8-2.1zm9.6 2.8l-5.9-14.6c-.1-.2-.1-.3-.1-.4 0-.3.2-.4.5-.4h.9c.5 0 .6.1.8.6l4.7 12.2 4.4-12.4c.1-.4.2-.5.7-.5h.7c.3 0 .5.1.5.4 0 .1-.1.3-.1.5l-6.9 19c-.9 2.4-1.4 2.9-2.8 2.9h-.7c-.4 0-.6-.2-.6-.5v-.8c0-.4.2-.6.5-.6h.3c.8 0 1.1-.3 1.4-1l1.7-4.4zm5.8-2.2h-.9v-.1s0-.1.1-.1h1.9s.1 0 .1.1v.1h-.9v2.5s0 .1-.1.1h-.2V645zm1.7.1v2.4s0 .1-.1.1h-.1s-.1 0-.1-.1v-2.7s0-.1.1-.1h.2c.1 0 .1 0 .1.1l.9 2.5.9-2.5c0-.1.1-.1.1-.1h.2s.1 0 .1.1v2.7h-.3v-2.4l-.8 2.4-.1.1h-.1c-.1 0-.1 0-.1-.1l-.9-2.4z"/>
+                        </svg>
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="pure-g copyright">
+            <div class="pure-u-16-24 pure-u-sm-19-24 pure-u-md-17-24">
+                <p>Copyright &copy; DeviceAtlas Limited 2022. All Rights Reserved.</p>
+                <p>This is a website of DeviceAtlas Limited, a private company limited by shares, incorporated and
+                    registered in the Republic of Ireland with registered number 398040 and registered office at 6th
+                    Floor, 2 Grand Canal Square, Dublin 2, Ireland</p>
+            </div>
+            <div class="pure-u-16-24 pure-u-sm-14-24 pure-u-md-6-24">
+                <div>Industry Affiliations</div>
+                <img src="/sites/deviceatlas.com/themes/brewdock/images/footer/industry-affiliations.svg">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--[if IE 8]></ie><![endif]-->
+	</body>
+
+</html>
